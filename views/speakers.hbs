@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>{{> head }}</head>
+    <body class="{{page}}">
+    {{> header}}
+    <section class="layout">
+      <div class="primary">
+          {{pagename}}
+          {{#compare pagename "==" "artistList" }}
+            {{> speakerslist}}
+          {{/compare}}
+          {{#compare pagename "==" "artistDetail" }}
+            {{> speakerslistdetail}}
+          {{/compare}}
+          {{#compare pagename "==" "home" }}
+            {{> speakerslisthome}}
+          {{/compare}}
+        </div><!-- primary -->
+      <aside class="secondary">
+        {{> nextmeeting}}
+        {{> artworklist}}
+      </aside><!-- secondary -->
+    </section><!-- layout -->
+
+    {{> footer}}
+    {{> jsdefaults}}
+  </body>
+        
+</html>
